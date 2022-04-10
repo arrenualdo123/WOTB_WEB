@@ -1,14 +1,17 @@
-#nav{
-    border: 1px;
-    border-color: blue;
+#div1{
+    background-color: blue;
+    background-size: 5px;
+    font: bold;
+    font-style: italic;
 }
-#hdh3{
-    font:bold;
-    text-align: 100px;
+
+#boton{
+    font-style: oblique;
+    background-color: aqua;
 }
-#anchor1{
-    color: black;
-}
-#anchor2{
-    color:black;
+
+#articulo{
+    border-color: black;
+    background-color: blueviolet;
+    background-size: 100px;
 }

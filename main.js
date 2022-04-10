@@ -1,6 +1,4 @@
 'use strict';
-/*
-document.getElementById('titulo').innerHTML="test";
 
 function cal(){
     var dato1=document.getElementById("texto1").value;
@@ -11,27 +9,19 @@ function cal(){
 
     var resultado=parsedato1+parsedato2;
     
-    document.getElementById("div").innerHTML=resultado;
+    document.getElementById("perrafo").innerHTML=resultado;
 }
 
+var ola=document.getElementById("div1");
 var boton=document.querySelector('#click');
+
 boton.addEventListener("click",()=>{
-    alert("ola");
+    var ver=new hola();
+    ver.oladiv();
 });
 
 function hola(){
-    var ola=document.getElementById("div1").value;
-    ola.innerHTML="olan't";
-}*/
-
-function localStorageTest(){
-    if(typeof(Storage)){
-        console.log("si se puede");
-        localStorage.setItem("ola","ola");
-    }else{
-        console.log("no se puede");
-        localStorage.getItem("ola");
+    this.oladiv=()=>{
+        ola.innerHTML="olan't";
     }
 }
-
-localStorageTest();
