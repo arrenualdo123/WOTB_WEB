@@ -1,8 +1,38 @@
+#cabezal{
+    background-color: black;
+    border: 10px;
+    border-color: aquamarine;
+}
+
+#perrafote{
+    color: chartreuse;
+}
+
+#seccion{
+    background-color: aquamarine;
+    border: 10px;
+    border-color: azure;
+}
+
+#div2{
+    background-color: greenyellow;
+    border: 5px;
+    outline-offset: 6px;
+    color: brown;
+}
+
+#articulo{
+    border-color: black;
+    background-color: blueviolet;
+    background-size: 10px;
+}
+
 #div1{
     background-color: blue;
     background-size: 5px;
     font: bold;
     font-style: italic;
+    color: cadetblue;
 }
 
 #boton{
@@ -10,8 +40,8 @@
     background-color: aqua;
 }
 
-#articulo{
-    border-color: black;
-    background-color: blueviolet;
-    background-size: 100px;
+#perrafo{
+    background-size: 10px;
+    background-color: chocolate;
+    outline-offset: 5px;
 }
