@@ -1,14 +1,14 @@
 'use strict';
 
-function cal(){
+/*function cal(){
     var dato1=document.getElementById("texto1").value;
     var dato2=document.getElementById("texto2").value;
 
     var parsedato1=parseInt(dato1);
     var parsedato2=parseInt(dato2);
 
-    var resultado=parsedato1+parsedato2;
-    
+    var resultado=parsedato1*parsedato2;
+
     document.getElementById("perrafo").innerHTML=resultado;
 }
 
@@ -22,6 +22,11 @@ boton.addEventListener("click",()=>{
 
 function hola(){
     this.oladiv=()=>{
-        ola.innerHTML="olan't";
+        ola.innerHTML="ola";
     }
+}*/
+
+var text=document.getElementById("parrafo");
+function texto(){
+    text.innerHTML="uwun't"
 }
