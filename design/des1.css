@@ -1,6 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
 }
 
 body.html{
@@ -8,7 +13,8 @@ body.html{
 }
 
 body{
-    background-image: url("f01faa484fb1efca0e247f93bcb8e5d6bc920f26.jpg");
+    height: 100vh;
+    background-image: url("images/f01faa484fb1efca0e247f93bcb8e5d6bc920f26.jpg");
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,24 +28,14 @@ body{
     position: absolute;
 }
 
-.parrafo{
-    color: aqua;
-    text-align: justify;
-}
-
 .wrapper{
     height: 320px;
     width: 600px;
     background: inherit;
     border-radius: 15px;
-    border: 1px solid rgb(43, 43, 43,0.568);
+    border: 1px solid rgb(43,43,43,0.568);
     position: absolute;
     overflow: hidden;
-    /*border-radius: 8px;
-    backdrop-filter: blur(20px);
-    background-color: rgb(255, 255, 255, 0.5);
-    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);*/
 }
 
 .wrapper::before{
@@ -52,68 +48,68 @@ body{
     right: 0;
     top: -25;
     bottom: 0;
-    box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
-    filter: blur(10px);
+    box-shadow: inset 0 0 0 3000px rgba(150,150,150,0.192);
+    filter: blur(20px);
     border-radius: 15px;
 }
 
-#texto1{
-    position: inherit;
+.input-contain{
+    position: relative;
 }
 
-#texto2{
-    position: inherit;
+input{
+    height: 5rem;
+    width: 40rem;
+    border: 2px solid black;
+    border-radius: 1rem;
 }
 
-#boton{
-    position: inherit;
-}
-/*
-#cabezal{
-    background-color: black;
-    border: 10px;
-    border-color: aquamarine;
+input:focus{
+    outline: none;
+    border-color: blueviolet;
 }
 
-#perrafote{
-    color: chartreuse;
+input:focus+.placeholder-text .text, :not(input[value=""])+.placeholder-text .text{
+    background-color: white;
+    font-size: 1.1rem;
+    color: black;
+    transform: translate(0,-170%);
 }
 
-#seccion{
-    background-color: aquamarine;
-    border: 10px;
-    border-color: azure;
+input:focus+.placeholder-text .text{
+    border-color: blueviolet;
+    color: blueviolet;
 }
 
-#div2{
-    background-color: greenyellow;
-    border: 5px;
-    outline-offset: 6px;
-    color: brown;
+.placeholder-text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
 }
 
-#articulo{
-    border-color: black;
-    background-color: blueviolet;
-    background-size: 10px;
+.text{
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    color: black;
+    transform: translate(0);
+    transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 
-#div1{
-    background-color: blue;
-    background-size: 5px;
-    font: bold;
-    font-style: italic;
-    color: cadetblue;
+input, .placeholder-text{
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
 }
 
-#boton{
-    font-style: oblique;
-    background-color: aqua;
+@media(max-width: 40rem){
+    input{
+        width: 70vw;
+    }
 }
-
-#perrafo{
-    background-size: 10px;
-    background-color: chocolate;
-    outline-offset: 5px;
-}
-*/
