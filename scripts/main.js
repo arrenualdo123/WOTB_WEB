@@ -1,5 +1,7 @@
 'use strict';
 
+document.getElementById("titulo").innerHTML="ola";
+
 var text=document.getElementById("parrafo");
 function texto(){
     text.innerHTML="uwun't"
