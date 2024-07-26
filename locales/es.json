@@ -1,43 +1,43 @@
 {
     "title": "Comandos del Bot de Discord",
     "add-existing-player": {
-        "title": "Agregar Jugador Existente",
+        "title": "agregar-jugador-existente",
         "content": "Este comando es usado para agregar a un jugador que ya existe en los registros del bot (véase check-player) a un equipo.<br><br>Este comando solo puede ser usado por un líder de equipo."
     },
     "change-team-clantag": {
-        "title": "Cambiar Clantag del Equipo",
+        "title": "cambiar-clantag-del-equipo",
         "content": "Este comando es usado para cambiar el clantag de un equipo. No puede ser cambiado a NULL.<br><br>Este comando solo puede ser usado por un líder de equipo."
     },
     "change-teammate-clantag": {
-        "title": "Cambiar Clantag del Jugador",
+        "title": "cambiar-clantag-del-jugador",
         "content": "Este comando es usado para cambiar el clantag de un jugador. Puede ser usado para quitar del roster (puede ser NULL) o cambiarlo de equipo.<br><br>Este comando solo puede ser usado por un líder de equipo."
     },
     "delete-team-registry": {
-        "title": "Eliminar Registro de Equipo",
+        "title": "eliminar-registro-de-equipo",
         "content": "Este comando es usado para eliminar el registro de un equipo, junto con sus jugadores, de la base de datos del bot.<br><br>Este comando solo puede ser usado por el líder del equipo que registró el equipo."
     },
     "delete-teammate-registry": {
-        "title": "Eliminar Registro de Jugador",
+        "title": "eliminar-registro-de-jgador",
         "content": "Este comando es usado para eliminar el registro de un jugador de la base de datos del bot.<br><br>Este comando solo puede ser usado por el líder del equipo que registró el equipo."
     },
     "personal-stats-tier10": {
-        "title": "Estadísticas Personales Tier 10",
+        "title": "estadísticas-personales-tier-10",
         "content": "Este comando es usado para consultar la tasa de victorias en tier 10 de un jugador.<br><br>Este comando puede ser usado por cualquier persona."
     },
     "roster": {
-        "title": "Roster",
+        "title": "roster",
         "content": "Este comando es usado para mostrar la estructura completa de un equipo, incluyendo la tasa de victorias de cada jugador y de todo el equipo.<br><br>Este comando puede ser usado por cualquier persona."
     },
     "single-teammate-registration": {
-        "title": "Registro de Jugador Individual",
+        "title": "registro-de-jugador-individual",
         "content": "Este comando es usado para registrar a un jugador en la base de datos del bot.<br><br>Este comando puede ser usado por cualquier persona."
     },
     "team-registration": {
-        "title": "Registro de Equipo",
+        "title": "registro-de-equipo",
         "content": "Este comando es usado para registrar a un equipo en la base de datos del bot.<br><br>Este comando solo puede ser usado por un líder de equipo."
     },
     "team-stats": {
-        "title": "Estadísticas del Equipo",
+        "title": "estadísticas-del-equipo",
         "content": "Este comando es usado para consultar las estadísticas de un equipo, incluyendo la tasa de victorias y las derrotas.<br><br>Este comando puede ser usado por cualquier persona."
     }
 }
