@@ -6,39 +6,36 @@
     <meta name="description" content="testing">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">Discord Bot Commands</title>
-    <link rel="shortcut icon" type="image/jpg" href="styles/assets/5aacd4140462d64e88cb30273858510c.jpg" style="width:100%;"/>
+    <title>Discord Bot Commands</title>
+    <link rel="shortcut icon" type="image/jpg" href="styles/assets/5aacd4140462d64e88cb30273858510c.jpg"/>
     <link rel="stylesheet" href="styles/styles1.css"/>
-    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-xhr-backend@3.2.2/dist/umd/i18nextXHRBackend.min.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#add-existing-player" data-i18n="add-existing-player.title">add-existing-player</a></li>
-                <li><a href="#change-team-clantag" data-i18n="change-team-clantag.title">change-team-clantag</a></li>
-                <li><a href="#change-teammate-clantag" data-i18n="change-teammate-clantag.title">change-teammate-clantag</a></li>
-                <li><a href="#delete-team-registry" data-i18n="delete-team-registry.title">delete-team-registry</a></li>
-                <li><a href="#delete-teammate-registry" data-i18n="delete-teammate-registry.title">delete-teammate-registry</a></li>
-                <li><a href="#personal-stats-tier10" data-i18n="personal-stats-tier10.title">personal-stats-tier10</a></li>
-                <li><a href="#roster" data-i18n="roster.title">roster</a></li>
-                <li><a href="#single-teammate-registration" data-i18n="single-teammate-registration.title">single-teammate-registration</a></li>
-                <li><a href="#team-registration" data-i18n="team-registration.title">team-registration</a></li>
-                <li><a href="#team-stats" data-i18n="team-stats.title">team-stats</a></li>
-                
+                <li><a href="#add-existing-player" data-translate-key="add_existing_player">add-existing-player</a></li>
+                <li><a href="#change-team-clantag" data-translate-key="change_team_clantag">change-team-clantag</a></li>
+                <li><a href="#change-teammate-clantag" data-translate-key="change_teammate_clantag">change-teammate-clantag</a></li>
+                <li><a href="#delete-team-registry" data-translate-key="delete_team_registry">delete-team-registry</a></li>
+                <li><a href="#delete-teammate-registry" data-translate-key="delete_teammate_registry">delete-teammate-registry</a></li>
+                <li><a href="#personal-stats-tier10" data-translate-key="personal_stats_tier10">personal-stats-tier10</a></li>
+                <li><a href="#roster" data-translate-key="roster">roster</a></li>
+                <li><a href="#single-teammate-registration" data-translate-key="single_teammate_registration">single-teammate-registration</a></li>
+                <li><a href="#team-registration" data-translate-key="team_registration">team-registration</a></li>
+                <li><a href="#team-stats" data-translate-key="team_stats">team-stats</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="add-existing-player" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="add-existing-player.title">add-existing-player</div>
+                <div class="title" data-translate-key="add_existing_player">add-existing-player</div>
                 <div class="content">
                     <div id="image-preview">
                         <img src="styles/assets/aep.jpeg" alt="Figure 1">
                     </div>
-                    <div class="input-contain" data-i18n="add-existing-player.content">
+                    <div class="input-contain" data-translate-key="add_existing_player_desc">
                         Este comando es usado para agregar a un jugador que ya existe en los registros del bot (véase check-player) a un equipo.<br><br>Este comando solo puede ser usado por un líder de equipo.
                     </div>
                 </div>
@@ -46,117 +43,117 @@
         </section>
         <section id="change-team-clantag" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="change-team-clantag.title">change-team-clantag</div>
+                <div class="title" data-translate-key="change_team_clantag">change-team-clantag</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/ctc.jpeg" alt="Figure 1">
+                        <img src="styles/assets/ctc.jpeg" alt="Figure 2">
                     </div>
-                    <div class="input-contain" data-i18n="change-team-clantag.content">
-                        Este comando es usado para cambiar el clantag de un equipo. No puede ser cambiado a NULL.<br><br>Este comando solo puede ser usado por un líder de equipo.
+                    <div class="input-contain" data-translate-key="change_team_clantag_desc">
+                        Este comando permite cambiar el clantag de un equipo registrado. Solo puede ser usado por un líder de equipo.
                     </div>
                 </div>
             </div>
         </section>
         <section id="change-teammate-clantag" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="change-teammate-clantag.title">change-teammate-clantag</div>
+                <div class="title" data-translate-key="change_teammate_clantag">change-teammate-clantag</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/ctc2.jpeg" alt="Figure 1">
+                        <img src="styles/assets/ctc.jpeg" alt="Figure 3">
                     </div>
-                    <div class="input-contain" data-i18n="change-teammate-clantag.content">
-                        Este comando es usado para cambiar el clantag de un jugador. Puede ser usado para quitar del roster (puede ser NULL) o cambiarlo de equipo.<br><br>Este comando solo puede ser usado por un líder de equipo.
+                    <div class="input-contain" data-translate-key="change_teammate_clantag_desc">
+                        Este comando permite cambiar el clantag de un compañero de equipo. Solo puede ser usado por un líder de equipo.
                     </div>
                 </div>
             </div>
         </section>
         <section id="delete-team-registry" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="delete-team-registry.title">delete-team-registry</div>
+                <div class="title" data-translate-key="delete_team_registry">delete-team-registry</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/dtr.jpeg" alt="Figure 1">
+                        <img src="styles/assets/dtr.jpeg" alt="Figure 4">
                     </div>
-                    <div class="input-contain" data-i18n="delete-team-registry.content">
-                        Este comando es usado para eliminar el registro de un equipo, junto con sus jugadores, de la base de datos del bot.<br><br>Este comando solo puede ser usado por el líder del equipo que registró el equipo.
+                    <div class="input-contain" data-translate-key="delete_team_registry_desc">
+                        Este comando permite eliminar el registro de un equipo. Solo puede ser usado por un administrador.
                     </div>
                 </div>
             </div>
         </section>
         <section id="delete-teammate-registry" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="delete-teammate-registry.title">delete-teammate-registry</div>
+                <div class="title" data-translate-key="delete_teammate_registry">delete-teammate-registry</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/dtr2.jpeg" alt="Figure 1">
+                        <img src="styles/assets/dtr2.jpeg" alt="Figure 5">
                     </div>
-                    <div class="input-contain" data-i18n="delete-teammate-registry.content">
-                        Este comando es usado para eliminar el registro de un jugador de la base de datos del bot.<br><br>Este comando solo puede ser usado por el líder del equipo que registró el equipo.
+                    <div class="input-contain" data-translate-key="delete_teammate_registry_desc">
+                        Este comando permite eliminar el registro de un compañero de equipo. Solo puede ser usado por un administrador.
                     </div>
                 </div>
             </div>
         </section>
         <section id="personal-stats-tier10" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="personal-stats-tier10.title">personal-stats-tier10</div>
+                <div class="title" data-translate-key="personal_stats_tier10">personal-stats-tier10</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/pst10.jpeg" alt="Figure 1">
+                        <img src="styles/assets/pst10.jpeg" alt="Figure 6">
                     </div>
-                    <div class="input-contain" data-i18n="personal-stats-tier10.content">
-                        Este comando es usado para consultar la tasa de victorias en tier 10 de un jugador.<br><br>Este comando puede ser usado por cualquier persona.
+                    <div class="input-contain" data-translate-key="personal_stats_tier10_desc">
+                        Este comando permite ver las estadísticas personales de un jugador en el nivel 10. Solo puede ser usado por el jugador.
                     </div>
                 </div>
             </div>
         </section>
         <section id="roster" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="roster.title">roster</div>
+                <div class="title" data-translate-key="roster">roster</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/roster.jpeg" alt="Figure 1">
+                        <img src="styles/assets/roster.jpeg" alt="Figure 7">
                     </div>
-                    <div class="input-contain" data-i18n="roster.content">
-                        Este comando es usado para mostrar la estructura completa de un equipo junto a la tasa de victorias de cada jugador y de todo el equipo.<br><br>Este comando puede ser usado por cualquier persona.
+                    <div class="input-contain" data-translate-key="roster_desc">
+                        Este comando muestra la lista de jugadores registrados en un equipo.
                     </div>
                 </div>
             </div>
         </section>
         <section id="single-teammate-registration" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="single-teammate-registration.title">single-teammate-registration</div>
+                <div class="title" data-translate-key="single_teammate_registration">single-teammate-registration</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/str.jpeg" alt="Figure 1">
+                        <img src="styles/assets/str.jpeg" alt="Figure 8">
                     </div>
-                    <div class="input-contain" data-i18n="single-teammate-registration.content">
-                        Este comando es usado para registrar a un jugador en la base de datos del bot.<br><br>Este comando puede ser usado por cualquier persona.
+                    <div class="input-contain" data-translate-key="single_teammate_registration_desc">
+                        Este comando permite registrar a un solo compañero de equipo. Solo puede ser usado por un líder de equipo.
                     </div>
                 </div>
             </div>
         </section>
         <section id="team-registration" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="team-registration.title">team-registration</div>
+                <div class="title" data-translate-key="team_registration">team-registration</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/tr.jpeg" alt="Figure 1">
+                        <img src="styles/assets/tr.jpeg" alt="Figure 9">
                     </div>
-                    <div class="input-contain" data-i18n="team-registration.content">
-                        Este comando es usado para registrar a un equipo en la base de datos del bot. <br><br>Este comando solo puede ser usado por un líder de equipo.
+                    <div class="input-contain" data-translate-key="team_registration_desc">
+                        Este comando permite registrar un equipo completo. Solo puede ser usado por un líder de equipo.
                     </div>
                 </div>
             </div>
         </section>
         <section id="team-stats" class="container">
             <div class="wrapper">
-                <div class="title" data-i18n="team-stats.title">team-stats</div>
+                <div class="title" data-translate-key="team_stats">team-stats</div>
                 <div class="content">
                     <div id="image-preview">
-                        <img src="styles/assets/ts.jpeg" alt="Figure 1">
+                        <img src="styles/assets/ts.jpeg" alt="Figure 10">
                     </div>
-                    <div class="input-contain" data-i18n="team-stats.content">
-                        Este comando es usado para consultar las estadísticas de un equipo, incluyendo la tasa de victorias y las derrotas.<br><br>Este comando puede ser usado por cualquier persona.
+                    <div class="input-contain" data-translate-key="team_stats_desc">
+                        Este comando muestra las estadísticas del equipo registrado.
                     </div>
                 </div>
             </div>
@@ -171,9 +168,14 @@
     </div>
     <div class="language-selector">
         <button id="lang-toggle">EN</button>
+        <div class="language-menu" style="display: none;">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('es')">Español</button>
+        </div>
     </div>
-    <script src="scripts/pagina.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/index-script.js"></script>
+    <script src="scripts/translation.js"></script>
 </body>
 </html>
 
