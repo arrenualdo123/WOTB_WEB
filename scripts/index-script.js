@@ -6,13 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
 
-        console.log(`Scrollable Height: ${scrollableHeight}, Scrolled: ${scrolled}`);
-
         if (scrolled >= scrollableHeight - 10) { // Ajuste de margen
-            console.log('Footer should be shown');
             footer.style.display = 'block';
         } else {
-            console.log('Footer should be hidden');
             footer.style.display = 'none';
         }
     });
@@ -29,5 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cookies-accepted', 'true');
         cookieConsent.style.display = 'none';
     });
-});
 
+
+});

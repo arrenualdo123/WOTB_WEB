@@ -1,53 +1,70 @@
-function updateContent(language) {
-    document.querySelectorAll('title, .title, .input-contain, footer, #cookie-consent p, nav ul li a').forEach(function(element) {
-        const text = element.innerText || element.textContent;
-        translateText(text, language, function(translatedText) {
-            element.innerHTML = translatedText;
-        });
-    });
-}
-
-// Función para hacer la llamada a la API de traducción
+// Función para traducir texto utilizando la API del servidor
 function translateText(text, targetLanguage, callback) {
-    const apiKey = '9c344b47-276a-4fe9-8748-9e97419ccf58:fx'; // Reemplaza con tu clave de API
-    const url = 'https://api-free.deepl.com/v2/translate';
-    
-    const data = new URLSearchParams();
-    data.append('auth_key', apiKey);
-    data.append('text', text);
-    data.append('target_lang', targetLanguage.toUpperCase()); // La API de DeepL usa códigos de idioma en mayúsculas
-
-    fetch(url, {
+    fetch('/translate', {  // URL relativa al servidor
         method: 'POST',
-        body: data
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text, targetLanguage })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.translations && data.translations[0] && data.translations[0].text) {
             callback(data.translations[0].text);
         } else {
             console.error('Error en la respuesta de la API:', data);
-            callback(text); // Si hay un error, se muestra el texto original
+            callback(text);
         }
     })
     .catch(error => {
         console.error('Error en la llamada a la API:', error);
-        callback(text); // Si hay un error, se muestra el texto original
+        callback(text);
     });
 }
 
-// Manejo del botón de selección de idioma
+// Función para actualizar el contenido según el idioma
+function updateContent(language) {
+    // Seleccionar solo las partes que deben ser traducidas
+    const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
+    elementsToTranslate.forEach(element => {
+        const originalText = element.getAttribute('data-original-text');
+        if (originalText) {
+            translateText(originalText, language, translatedText => {
+                element.innerHTML = translatedText;
+            });
+        }
+    });
+}
+
+// Función para inicializar las traducciones
+function initTranslations() {
+    // Guardar el texto original en un atributo data
+    const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
+    elementsToTranslate.forEach(element => {
+        if (!element.hasAttribute('data-original-text')) {
+            element.setAttribute('data-original-text', element.innerText || element.textContent);
+        }
+    });
+}
+
+// Manejador para el botón de selección de idioma
 document.getElementById('lang-toggle').addEventListener('click', function() {
-    var menu = document.querySelector('.language-menu');
+    const menu = document.querySelector('.language-menu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
 });
 
-// Función para cambiar el idioma y actualizar el contenido
+// Función para configurar el idioma y actualizar el contenido
 function setLanguage(lang) {
-    updateContent(lang); // Actualiza el contenido con el nuevo idioma
-    document.getElementById('lang-toggle').innerText = lang.toUpperCase(); // Cambia el texto del botón
-    document.querySelector('.language-menu').style.display = 'none'; // Oculta el menú después de seleccionar un idioma
+    updateContent(lang);
+    document.getElementById('lang-toggle').innerText = lang.toUpperCase();
+    document.querySelector('.language-menu').style.display = 'none';
 }
 
-// Llama a updateContent con el idioma inicial
-updateContent('en');
+// Inicializar traducciones y establecer el idioma inicial
+initTranslations();
+setLanguage('en');
