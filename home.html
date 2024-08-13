@@ -8,20 +8,42 @@
 </head>
 <body>
     <header>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" id="hamburger-icon">
-                &#9776;
-            </div>
-            <div class="hamburger-dropdown" id="hamburger-dropdown">
+        <div class="menu-hamburguesa" id="menuHamburguesa">
+            <button class="menu-hamburguesa-icono" id="hamburgerIcon">☰</button>
+            <div class="menu-desplegable" id="hamburgerDropdown">
                 <a href="home.html">Home</a>
-                <a href="index.html">Comandos</a>
+                <a href="index.html">Commands</a>
+                <a href="contact.html">Contact</a>
             </div>
-        </div>
+        </div>        
     </header>
     <main>
         <h1>Bienvenido a la Página de Inicio</h1>
-        <p>Esta es la página principal de tu sitio.</p>
+        <section>
+            <h2>Sobre Nosotros</h2>
+            <p>Descripción breve sobre el propósito del sitio o del bot.</p>
+        </section>
+        <section>
+            <h2>Características</h2>
+            <p>Detalles sobre las características principales del bot.</p>
+        </section>
     </main>
+    <footer class="description">
+        &copy; 2024 Discord Bot Comandos. Todos los derechos reservados.
+    </footer>
+    <div id="cookie-consent" class="cookie-consent description">
+        <p>Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web. <a href="#">Aprende más</a>.</p>
+        <button id="cookie-accept">¡Entendido!</button>
+    </div>
+    <div class="language-selector">
+        <button id="lang-toggle">EN</button>
+        <div class="language-menu" style="display: none;">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('es')">Español</button>
+        </div>
+    </div>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/index-script.js"></script>
 </body>
 </html>

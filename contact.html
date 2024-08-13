@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-hamburguesa" id="menuHamburguesa">
+            <button class="menu-hamburguesa-icono" id="hamburgerIcon">☰</button>
+            <div class="menu-desplegable" id="hamburgerDropdown">
+                <a href="home.html">Home</a>
+                <a href="index.html">Commands</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <form action="email.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="recipient_email">Recipient Email:</label>
+            <input type="email" id="recipient_email" name="recipient_email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send</button>
+            
+            <div id="form-message" style="display: none;"></div>
+        </form>
+    </main>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>

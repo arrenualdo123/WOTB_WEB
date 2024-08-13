@@ -1,0 +1,87 @@
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #333;
+    --color-tertiary: #555;
+    --color-background: #f0f0f0;
+    --color-text: #333;
+    --color-light: #fff;
+    --color-dark: #000000;
+    --color-hover: #f1f1f1;
+    --color-button: #007bff;
+    --color-button-hover: #0056b3;
+    --color-link: #00f;
+    --color-link-hover: #00c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--color-button);
+    color: var(--color-light);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.menu-hamburguesa {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-hamburguesa-icono {
+    font-size: 18px;
+    padding: 8px;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: var(--color-light);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 120px; /* Ajusta el ancho según tus necesidades */
+    background-color: #ffffff;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    border-radius: 4px;
+}
+
+.menu-desplegable a {
+    display: block;
+    padding: 8px 10px; /* Ajusta el padding según sea necesario */
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+}
+
+.menu-desplegable a:hover {
+    background-color: var(--color-hover);
+}
+
+.menu-activo .menu-desplegable {
+    display: block;
+}
+
