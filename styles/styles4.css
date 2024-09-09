@@ -32,19 +32,18 @@
     background-color: var(--color-light);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    width: 120px; /* Ajusta el ancho según tus necesidades */
-    background-color: #ffffff;
-    overflow: hidden; /* Evita que el contenido se desborde */
+    width: 120px;
     border-radius: 4px;
+    transition: all 0.3s ease-in-out; /* Unificación de la animación */
 }
 
 .menu-desplegable a {
     display: block;
-    padding: 8px 10px; /* Ajusta el padding según sea necesario */
+    padding: 8px 10px;
     color: var(--color-dark);
     text-decoration: none;
     font-size: 18px;
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    white-space: nowrap;
 }
 
 .menu-desplegable a:hover {

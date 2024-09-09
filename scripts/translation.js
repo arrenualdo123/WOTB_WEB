@@ -1,11 +1,11 @@
-// Función para traducir texto utilizando la API del servidor
 function translateText(text, targetLanguage, callback) {
-    fetch('/translate', {  // URL relativa al servidor
+    console.log('Enviando datos:', { text: text, targetLanguage: targetLanguage });
+    fetch('/pagina/php/proxy.php', {  // URL del proxy en PHP
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ text, targetLanguage })
+        body: JSON.stringify({ text: text, targetLanguage: targetLanguage })
     })
     .then(response => {
         if (!response.ok) {
@@ -27,9 +27,9 @@ function translateText(text, targetLanguage, callback) {
     });
 }
 
+
 // Función para actualizar el contenido según el idioma
 function updateContent(language) {
-    // Seleccionar solo las partes que deben ser traducidas
     const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
     elementsToTranslate.forEach(element => {
         const originalText = element.getAttribute('data-original-text');
@@ -43,7 +43,6 @@ function updateContent(language) {
 
 // Función para inicializar las traducciones
 function initTranslations() {
-    // Guardar el texto original en un atributo data
     const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
     elementsToTranslate.forEach(element => {
         if (!element.hasAttribute('data-original-text')) {
