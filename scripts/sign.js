@@ -14,14 +14,10 @@ loginBtn.addEventListener('click', () => {
 
 signUpForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // Aquí puedes guardar los datos del registro en localStorage o enviarlos a tu servidor
-    // Por simplicidad, solo redirigimos a la página de inicio de sesión
     container.classList.remove("active");
 });
 
 signInForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // Aquí puedes validar los datos del inicio de sesión
-    // Por simplicidad, redirigimos a la página design.html
     window.location.href = 'panel.html';
 });

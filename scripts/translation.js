@@ -27,8 +27,6 @@ function translateText(text, targetLanguage, callback) {
     });
 }
 
-
-// Función para actualizar el contenido según el idioma
 function updateContent(language) {
     const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
     elementsToTranslate.forEach(element => {
@@ -41,7 +39,6 @@ function updateContent(language) {
     });
 }
 
-// Función para inicializar las traducciones
 function initTranslations() {
     const elementsToTranslate = document.querySelectorAll('.description, footer, #cookie-consent p');
     elementsToTranslate.forEach(element => {
